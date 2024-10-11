@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Quotes</title>
+</head>
+<body>
+    <blockquote id="quote"></blockquote>
+    <cite>For AKU made with ❤️</cite>
+
+    <script>
+        const quotes = [
+            "Life is what happens when you're busy making other plans.",
+            "Get busy living or get busy dying.",
+            "You only live once, but if you do it right, once is enough.",
+            "The purpose of our lives is to be happy."
+        ];
+
+        // Get the current date and use the day of the year as the index
+        const today = new Date();
+        const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+        
+        // Use modulo to get a valid index for the quotes array
+        const quoteIndex = dayOfYear % quotes.length;
+
+        // Display the quote        
+        document.getElementById('quote').innerText = quotes[quoteIndex];
+    </script>
+</body>
+</html>
