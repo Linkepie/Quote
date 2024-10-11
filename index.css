@@ -1,52 +1,94 @@
 @import url('https://fonts.googleapis.com/css?family=Special+Elite');
 
 html, body {
-	height: 100%;
-	margin: 0;
+    height: 100%;
+    margin: 0;
 }
 
 body {
-	font-family: 'Special Elite', cursive;
-	background: #fffdf5;
-	color: #3f3f5a;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+    font-family: 'Special Elite', cursive;
+    background: #fffdf5;
+    color: #3f3f5a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box; /* Ensure padding is included in total width/height */
 }
 
 blockquote {
-	font-weight: 100;
-	font-size: 2rem;
-	max-width: 600px;
-	line-height: 1.4;
-	position: relative;
-	margin: 0;
-	padding: .5rem;
+    font-weight: 100;
+    font-size: 1.8rem; /* Adjusted for better mobile readability */
+    max-width: 90%; /* Set to a percentage for responsiveness */
+    line-height: 1.5; /* Increased line-height for better readability */
+    position: relative;
+    margin: 0;
+    padding: 1rem; /* Added more padding for mobile */
+    text-align: center; /* Center align text for better aesthetics */
 }
 
 blockquote:before,
 blockquote:after {
-	position: absolute;
-	color: #f1efe6;
-	font-size: 8rem;
-	width: 4rem;
-	height: 4rem;
+    position: absolute;
+    color: #f1efe6;
+    font-size: 5rem; /* Adjusted size for mobile */
+    width: 3rem; /* Reduced size for mobile */
+    height: 3rem; /* Reduced size for mobile */
 }
 
 blockquote:before {
-	content: '“';
-	left: -5rem;
-	top: -2rem;
+    content: '“';
+    left: -2rem; /* Adjusted position */
+    top: -1rem; /* Adjusted position */
 }
 
 blockquote:after {
-	content: '”';
-	right: -5rem;
-	bottom: 1rem;
+    content: '”';
+    right: -2rem; /* Adjusted position */
+    bottom: -1rem; /* Adjusted position */
 }
 
 cite {
-	line-height: 3;
-	text-align: left;
+    line-height: 2; /* Adjusted for mobile spacing */
+    text-align: center; /* Center align citation for aesthetics */
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+    blockquote {
+        font-size: 1.6rem; /* Further reduced font size for smaller screens */
+        padding: 1.5rem; /* Increased padding */
+    }
+
+    blockquote:before,
+    blockquote:after {
+        font-size: 4rem; /* Smaller quote marks */
+    }
+
+    blockquote:before {
+        left: -1rem; /* Adjusted position */
+        top: -0.5rem; /* Adjusted position */
+    }
+
+    blockquote:after {
+        right: -1rem; /* Adjusted position */
+        bottom: -0.5rem; /* Adjusted position */
+    }
+
+    body {
+        padding: 0.5rem; /* Reduced padding on smaller devices */
+    }
+}
+
+/* For tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    blockquote {
+        font-size: 1.8rem; /* Larger than mobile but smaller than desktop */
+    }
+
+    blockquote:before,
+    blockquote:after {
+        font-size: 6rem; /* Medium size for tablets */
+    }
 }
