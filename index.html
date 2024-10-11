@@ -15,18 +15,36 @@
             "Life is what happens when you're busy making other plans.",
             "Get busy living or get busy dying.",
             "You only live once, but if you do it right, once is enough.",
-            "The purpose of our lives is to be happy."
+            "The purpose of our lives is to be happy.",
+            "In the end, we will remember not the words of our enemies, but the silence of our friends.",
+            "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+            "The only impossible journey is the one you never begin.",
+            "Happiness is not something ready made. It comes from your own actions.",
+            "Success is not how high you have climbed, but how you make a positive difference to the world.",
+            "You must be the change you wish to see in the world.",
+            "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+            "Life is either a daring adventure or nothing at all.",
+            "Your time is limited, so don't waste it living someone else's life.",
+            "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+            "It does not matter how slowly you go as long as you do not stop.",
+            "Dream big and dare to fail.",
+            "Believe you can and you're halfway there.",
+            "Act as if what you do makes a difference. It does.",
+            "The future belongs to those who believe in the beauty of their dreams.",
+            "Success usually comes to those who are too busy to be looking for it."
         ];
 
-        // Get the current date and use the day of the year as the index
+        // Get the current date
         const today = new Date();
         const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
         
         // Use modulo to get a valid index for the quotes array
         const quoteIndex = dayOfYear % quotes.length;
 
-        // Display the quote        
+        // Display the quote
         document.getElementById('quote').innerText = quotes[quoteIndex];
+
+        console.log('Quote Index for today:', quoteIndex); // Log the index
     </script>
 </body>
 </html>
